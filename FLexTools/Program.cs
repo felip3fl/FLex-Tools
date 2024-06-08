@@ -18,6 +18,9 @@ namespace FLexTools
                 case "CPF":
                     GerarCpf();
                     break;
+                case "GUID":
+                    GerarGuid();
+                    break;
                 default:
                     break;
             }
@@ -36,6 +39,12 @@ namespace FLexTools
         public static void GerarCpf()
         {
             var cpf = new CPF().GerarCpf();
+            Console.WriteLine(cpf);
+        }
+
+        public static void GerarGuid()
+        {
+            var cpf = new GUID().GerateGuid();
             Console.WriteLine(cpf);
         }
 
