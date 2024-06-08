@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DevTools
+﻿namespace FLexTools.Tools
 {
     public class CPF
     {
-        public String GerarCpf()
+        public string GerarCpf()
         {
             int soma = 0, resto = 0;
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
