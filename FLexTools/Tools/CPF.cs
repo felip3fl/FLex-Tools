@@ -2,7 +2,7 @@
 {
     public class CPF
     {
-        public string GerarCpf()
+        public string Generate()
         {
             int soma = 0, resto = 0;
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };

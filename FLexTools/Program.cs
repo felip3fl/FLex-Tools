@@ -16,10 +16,10 @@ namespace FLexTools
             switch (parameters)
             {
                 case "CPF":
-                    GerarCpf();
+                    GenerateCpf();
                     break;
                 case "GUID":
-                    GerarGuid();
+                    GenerateGuid();
                     break;
                 default:
                     break;
@@ -36,15 +36,15 @@ namespace FLexTools
             return true;
         }
 
-        public static void GerarCpf()
+        public static void GenerateCpf()
         {
-            var cpf = new CPF().GerarCpf();
+            var cpf = new CPF().Generate();
             Console.WriteLine(cpf);
         }
 
-        public static void GerarGuid()
+        public static void GenerateGuid()
         {
-            var cpf = new GUID().GerateGuid();
+            var cpf = new GUID().Generate();
             Console.WriteLine(cpf);
         }
 

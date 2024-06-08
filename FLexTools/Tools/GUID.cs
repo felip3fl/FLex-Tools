@@ -2,7 +2,7 @@
 {
     public class GUID
     {
-        public string GerateGuid()
+        public string Generate()
         {
             return Guid.NewGuid().ToString();
         }
