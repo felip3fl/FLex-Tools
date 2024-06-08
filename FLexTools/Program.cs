@@ -2,12 +2,16 @@
 
 namespace FLexTools
 {
-    class TestClass
+    public class FLexTools
     {
-        [STAThread]
         static void Main(string[] args)
         {
-            var parameters = args.FirstOrDefault().ToUpper();
+            string parameters = "GUID";
+
+            if (validateParameters(args))
+            {
+                parameters = args.FirstOrDefault().ToUpper();
+            }
 
             switch (parameters)
             {
@@ -17,6 +21,16 @@ namespace FLexTools
                 default:
                     break;
             }
+        }
+
+        private static bool validateParameters(string[] args)
+        {
+            if (args.FirstOrDefault() == null)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public static void GerarCpf()
