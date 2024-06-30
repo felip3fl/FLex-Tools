@@ -6,7 +6,7 @@ namespace FLexTools
     {
         static void Main(string[] args)
         {
-            string parameters = "GUID";
+            string parameters = "CPNPJ";
 
             if (validateParameters(args))
             {
@@ -20,6 +20,9 @@ namespace FLexTools
                     break;
                 case "GUID":
                     GenerateGuid();
+                    break;
+                case "CPNPJ":
+                    GenerateCNPJ();
                     break;
                 default:
                     break;
@@ -46,6 +49,12 @@ namespace FLexTools
         {
             var cpf = new GUID().Generate();
             Console.WriteLine(cpf);
+        }
+
+        public static void GenerateCNPJ()
+        {
+            var cnpj = new CNPJ().Generate();
+            Console.WriteLine(cnpj);
         }
 
     }
