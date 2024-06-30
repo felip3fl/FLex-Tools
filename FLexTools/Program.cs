@@ -6,7 +6,7 @@ namespace FLexTools
     {
         static void Main(string[] args)
         {
-            string parameters = "CPNPJ";
+            string parameters = "CNPJ";
 
             if (validateParameters(args))
             {
@@ -21,7 +21,7 @@ namespace FLexTools
                 case "GUID":
                     GenerateGuid();
                     break;
-                case "CPNPJ":
+                case "CNPJ":
                     GenerateCNPJ();
                     break;
                 default:
