@@ -42,19 +42,30 @@ namespace FLexTools
         public static void GenerateCpf()
         {
             var cpf = new CPF().Generate();
+            SetClipboard(cpf);
             Console.WriteLine(cpf);
         }
 
         public static void GenerateGuid()
         {
-            var cpf = new GUID().Generate();
-            Console.WriteLine(cpf);
+            var guid = new GUID().Generate();
+            SetClipboard(guid);
+            Console.WriteLine(guid);
         }
 
         public static void GenerateCNPJ()
         {
             var cnpj = new CNPJ().Generate();
+            SetClipboard(cnpj);
             Console.WriteLine(cnpj);
+        }
+
+        private static void SetClipboard(string text)
+        {
+            Thread thread = new Thread(() => Clipboard.SetText(text));
+            thread.SetApartmentState(ApartmentState.STA); //Set the thread to STA
+            thread.Start();
+            thread.Join();
         }
 
     }
