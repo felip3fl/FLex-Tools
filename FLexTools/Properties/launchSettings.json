@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FLexTools": {
+      "commandName": "Project",
+      "commandLineArgs": "CPF"
+    }
+  }
+}
