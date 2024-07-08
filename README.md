@@ -8,7 +8,7 @@
 ## 📃 Descrição do projeto
 
 <p align="justify">
- Projeto desenvolvido usando C# com o proposito de criar pesquenas ferramentas para dev
+ Projeto desenvolvido usando C# com o proposito de criar ferramentas para dev
 </p>
 
 
