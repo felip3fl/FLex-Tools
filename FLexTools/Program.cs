@@ -6,7 +6,7 @@ namespace FLexTools
     {
         static void Main(string[] args)
         {
-            string parameters = "CNPJ";
+            string parameters = "";
 
             if (validateParameters(args))
             {
