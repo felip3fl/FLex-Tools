@@ -1,19 +1,23 @@
 ﻿using FLexTools.Tools;
+using System;
+using System.Globalization;
 
 namespace FLexTools
 {
     public class FLexTools
     {
+        [STAThread]
         static void Main(string[] args)
         {
-            string parameters = "";
+
+            string parameters = "uppercase";
 
             if (validateParameters(args))
             {
                 parameters = args.FirstOrDefault().ToUpper();
             }
 
-            switch (parameters)
+            switch (parameters.ToUpper())
             {
                 case "CPF":
                     GenerateCpf();
@@ -23,6 +27,9 @@ namespace FLexTools
                     break;
                 case "CNPJ":
                     GenerateCNPJ();
+                    break;
+                case "UPPERCASE":
+                    TextToTitleCase();
                     break;
                 default:
                     break;
@@ -51,6 +58,26 @@ namespace FLexTools
             var guid = new GUID().Generate();
             SetClipboard(guid);
             Console.WriteLine(guid);
+        }
+
+        public static void TextToTitleCase()
+        {
+            TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
+
+            var text = getClipboardText().ToLower();
+            var textTitleCase = myTI.ToTitleCase(text);
+            SetClipboard(textTitleCase);
+            Console.WriteLine(textTitleCase);
+        }
+
+        private static string getClipboardText()
+        {
+            string returnAudioStream = null;
+            if (Clipboard.ContainsText())
+            {
+                returnAudioStream = Clipboard.GetText();
+            }
+            return returnAudioStream;
         }
 
         public static void GenerateCNPJ()
