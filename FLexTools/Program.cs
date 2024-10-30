@@ -28,7 +28,9 @@ namespace FLexTools
                 case "CNPJ":
                     GenerateCNPJ();
                     break;
-                case "UPPERCASE":
+                case "UPPERCASE": 
+                case "UPPER":
+                case "UP":
                     TextToTitleCase();
                     break;
                 default:
