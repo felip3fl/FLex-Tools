@@ -17,6 +17,11 @@ namespace FLexTools
                 parameters = args.FirstOrDefault().ToUpper();
             }
 
+            if (parameters == "")
+            {
+                
+            }
+
             switch (parameters.ToUpper())
             {
                 case "CPF":
