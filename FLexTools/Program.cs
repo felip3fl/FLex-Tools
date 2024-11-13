@@ -19,20 +19,31 @@ namespace FLexTools
 
             if (parameters == "")
             {
-                
+                //show menu with all the itens:
+                Console.WriteLine("FLexTools - Tools for your day by day");
+                Console.WriteLine("Usage: FLexTools [parameter]");
+                Console.WriteLine("Parameters:");
+                Console.WriteLine("CPF - Generate a new CPF number and copy to clipboard");
+                Console.WriteLine("CNPJ - Generate a new CNPJ number and copy to clipboard");
+                Console.WriteLine("GUID - Generate a new GUID and copy to clipboard");
+                Console.WriteLine("UPPERCASE - Convert the text in clipboard to UPPERCASE and copy to clipboard");
             }
 
             switch (parameters.ToUpper())
             {
+                case "1":
                 case "CPF":
                     GenerateCpf();
                     break;
+                case "2":
                 case "GUID":
                     GenerateGuid();
                     break;
+                case "3":
                 case "CNPJ":
                     GenerateCNPJ();
                     break;
+                case "4":
                 case "UPPERCASE": 
                 case "UPPER":
                 case "UP":
