@@ -10,23 +10,24 @@ namespace FLexTools
         static void Main(string[] args)
         {
 
-            string parameters = "uppercase";
+            string parameters = "";
 
             if (validateParameters(args))
             {
                 parameters = args.FirstOrDefault().ToUpper();
             }
 
-            if (parameters == "")
+            while (parameters == "")
             {
                 //show menu with all the itens:
-                Console.WriteLine("FLexTools - Tools for your day by day");
-                Console.WriteLine("Usage: FLexTools [parameter]");
-                Console.WriteLine("Parameters:");
-                Console.WriteLine("CPF - Generate a new CPF number and copy to clipboard");
-                Console.WriteLine("CNPJ - Generate a new CNPJ number and copy to clipboard");
-                Console.WriteLine("GUID - Generate a new GUID and copy to clipboard");
-                Console.WriteLine("UPPERCASE - Convert the text in clipboard to UPPERCASE and copy to clipboard");
+                Console.WriteLine("FLexTools");
+                Console.WriteLine("Type your option:");
+                Console.WriteLine("1 CPF - Generate a new CPF number and copy to clipboard");
+                Console.WriteLine("2 CNPJ - Generate a new CNPJ number and copy to clipboard");
+                Console.WriteLine("3 GUID - Generate a new GUID and copy to clipboard");
+                Console.WriteLine("4 UPPERCASE - Convert the text in clipboard to UPPERCASE and copy to clipboard");
+                
+                parameters = Console.ReadLine();
             }
 
             switch (parameters.ToUpper())
