@@ -19,13 +19,11 @@ namespace FLexTools
 
             while (parameters == "")
             {
-                //show menu with all the itens:
-                Console.WriteLine("FLexTools");
                 Console.WriteLine("Type your option:");
-                Console.WriteLine("1 CPF - Generate a new CPF number and copy to clipboard");
-                Console.WriteLine("2 CNPJ - Generate a new CNPJ number and copy to clipboard");
-                Console.WriteLine("3 GUID - Generate a new GUID and copy to clipboard");
-                Console.WriteLine("4 UPPERCASE - Convert the text in clipboard to UPPERCASE and copy to clipboard");
+                Console.WriteLine("1 CPF - Generate a new CPF number");
+                Console.WriteLine("2 CNPJ - Generate a new CNPJ number");
+                Console.WriteLine("3 GUID - Generate a new GUID");
+                Console.WriteLine("4 UPPERCASE - Convert the text in clipboard to UPPERCASE");
                 
                 parameters = Console.ReadLine();
             }
