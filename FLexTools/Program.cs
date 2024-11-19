@@ -79,12 +79,11 @@ namespace FLexTools
 
         public static void TextToTitleCase()
         {
-            TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
-
             var text = getClipboardText().ToLower();
-            var textTitleCase = myTI.ToTitleCase(text);
-            SetClipboard(textTitleCase);
-            Console.WriteLine(textTitleCase);
+            var uppercase = new Uppercase().Transform(text);
+            
+            SetClipboard(uppercase);
+            Console.WriteLine(uppercase);
         }
 
         private static string getClipboardText()
