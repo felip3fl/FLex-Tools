@@ -32,14 +32,17 @@ namespace FLexTools
             {
                 case "1":
                 case "CPF":
+                case "CP":
                     GenerateCpf();
                     break;
                 case "2":
                 case "GUID":
+                case "GU":
                     GenerateGuid();
                     break;
                 case "3":
                 case "CNPJ":
+                case "CN":
                     GenerateCNPJ();
                     break;
                 case "4":
