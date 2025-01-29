@@ -9,10 +9,10 @@
             int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
             Random rnd = new Random();
-            string semente = rnd.Next(100000000, 999999999).ToString();
+            string seed = rnd.Next(100000000, 999999999).ToString();
 
             for (int i = 0; i < 9; i++)
-                soma += int.Parse(semente[i].ToString()) * multiplicador1[i];
+                soma += int.Parse(seed[i].ToString()) * multiplicador1[i];
 
             resto = soma % 11;
             if (resto < 2)
@@ -20,11 +20,11 @@
             else
                 resto = 11 - resto;
 
-            semente = semente + resto;
+            seed = seed + resto;
             soma = 0;
 
             for (int i = 0; i < 10; i++)
-                soma += int.Parse(semente[i].ToString()) * multiplicador2[i];
+                soma += int.Parse(seed[i].ToString()) * multiplicador2[i];
 
             resto = soma % 11;
 
@@ -33,8 +33,8 @@
             else
                 resto = 11 - resto;
 
-            semente = semente + resto;
-            return semente;
+            seed = seed + resto;
+            return seed;
         }
     }
 }
