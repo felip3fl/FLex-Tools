@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+	<OutputType>Exe</OutputType>
 	<TargetFramework>net8.0-windows</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+	<ImplicitUsings>enable</ImplicitUsings>
 	<UseWindowsForms>true</UseWindowsForms>
 	<ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <ApplicationIcon>FL Metro 256.ico</ApplicationIcon>
+	<Version>1.25.01.29</Version>
+	<Nullable>enable</Nullable>
+	<ApplicationIcon>FL Metro 256.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="FL Metro 256.ico" />
+	<Content Include="FL Metro 256.ico" />
   </ItemGroup>
 
 </Project>
