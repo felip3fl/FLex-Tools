@@ -36,5 +36,14 @@
             seed = seed + resto;
             return seed;
         }
+
+        public bool checkValidCpf(string cpf)
+        {
+            //check if it is a valid CPF
+            if (cpf.Length == 11)
+                return true;
+            
+            return false;
+        }
     }
 }
