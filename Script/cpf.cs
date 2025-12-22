@@ -8,7 +8,7 @@ var cpfs = new List<string>();
 if(args.Length > 0)
     arguments = args[0];
 
-if (arguments.Length > 10)
+if (arguments.Length > 3)
 {
     var isValidCpf = checkValidCpf(arguments);
     if (isValidCpf)
@@ -23,7 +23,7 @@ if (arguments.Length > 10)
     }
 
     Console.ForegroundColor = ConsoleColor.White;
-
+    Console.ReadKey();
     return;
 }
 
