@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SplitFile (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "SplitFile (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

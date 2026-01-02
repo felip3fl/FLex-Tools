@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    
+<Window
+    x:Class="SplitFile.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SplitFile"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="SplitFile">
+
+    <Window.SystemBackdrop>
+        <DesktopAcrylicBackdrop  />
+    </Window.SystemBackdrop>
+
+
+    <Grid>
+        <StackPanel 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            Width="500"
+            Spacing="20">
+
+            <!-- Linha com TextBox e Botão Procurar -->
+            <Grid>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="2">
+                    <TextBlock x:Name="txtCaminhoArquivoas" FontSize="24" FontWeight="Bold" Text="FileName.txt"/>
+                    <TextBlock x:Name="txtCaminhoArquivo" Text="D:\OneDrive\Documents\Streets of Rage 4 Save and Config"/>
+                </StackPanel>
+                <!--<TextBox 
+                    x:Name="txtCaminhoArquivo"
+                    Grid.Column="0"
+                    PlaceholderText="Selecione um arquivo..."
+                    IsReadOnly="True"
+                    FlowDirection="RightToLeft"
+                    Margin="0,0,20,0"/>-->
+
+
+
+                <Button 
+                    x:Name="btnProcurar"
+                    Grid.Column="0"
+                    Click="BtnProcurar_Click"   
+                    Height="60" Width="60"
+                >
+                    <Viewbox Height="30" >
+                        <SymbolIcon Symbol="Folder"/>
+                    </Viewbox>
+
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <NumberBox
+                x:Name="NumberBoxSpinButtonPlacementExample"
+                Header="Dividir em quantas parte"
+                Value="2"
+                Grid.Column="0"
+                SpinButtonPlacementMode="Inline"
+                SmallChange="1"
+                LargeChange="100" />
+
+                <TextBox 
+                    x:Name="txtOutputFile"
+                    Grid.Column="2"
+                    Header="Sufixo arquivos novos"
+                    PlaceholderText="parte"
+                    IsReadOnly="True"
+                    Text="-parte"
+                    />
+            </Grid>
+
+
+            <Button 
+                x:Name="btnExecutar"
+                Click="BtnExecutar_Click"
+                HorizontalAlignment="Stretch"
+                Style="{StaticResource AccentButtonStyle}"
+                >
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <TextBlock Text="Dividir" VerticalAlignment="Center"/>
+                    <FontIcon Glyph="&#xE751;" FontSize="16"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
