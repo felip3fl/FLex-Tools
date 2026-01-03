@@ -34,7 +34,7 @@ namespace SplitFile
             IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
             var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
             var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
-            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 600, Height = 300 });
+            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 520, Height = 300 });
 
             var presenter = appWindow.Presenter as Microsoft.UI.Windowing.OverlappedPresenter;
             if (presenter != null)

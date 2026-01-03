@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    
+
 <Window
     x:Class="SplitFile.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -9,31 +9,37 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="SplitFile">
+    Title="SplitFile"
+    >
 
     <Window.SystemBackdrop>
         <DesktopAcrylicBackdrop  />
     </Window.SystemBackdrop>
 
 
-    <Grid>
-        <StackPanel 
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center"
-            Width="500"
-            Spacing="20">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="506" />
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-            <!-- Linha com TextBox e Botão Procurar -->
-            <Grid>
+
+        <Grid Background="#26000000" Padding="30,30,30,30" Grid.Row="0">
                 <Grid.ColumnDefinitions >
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="20"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="2">
-                    <TextBlock x:Name="txtCaminhoArquivoas" FontSize="24" FontWeight="Bold" Text="FileName.txt"/>
-                    <TextBlock x:Name="txtCaminhoArquivo" Text="D:\OneDrive\Documents\Streets of Rage 4 Save and Config"/>
+                <StackPanel Grid.Column="2" >
+                    <TextBlock x:Name="txtCaminhoArquivoas" FontSize="24" FontWeight="Bold" Text="Dividir arquivo de texto"/>
+                    <TextBlock x:Name="txtCaminhoArquivo" Text="C:\Selecione aqqui o endereço do seu arquivo de tex"/>
                 </StackPanel>
                 <!--<TextBox 
                     x:Name="txtCaminhoArquivo"
@@ -50,6 +56,7 @@
                     Grid.Column="0"
                     Click="BtnProcurar_Click"   
                     Height="60" Width="60"
+                    
                 >
                     <Viewbox Height="30" >
                         <SymbolIcon Symbol="Folder"/>
@@ -58,7 +65,7 @@
                 </Button>
             </Grid>
 
-            <Grid>
+        <Grid Padding="30,30,30,00" Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="20"/>
@@ -84,19 +91,20 @@
                     />
             </Grid>
 
-
+        <Grid Padding="30,20,30,0"  Grid.Row="2">
             <Button 
                 x:Name="btnExecutar"
                 Click="BtnExecutar_Click"
                 HorizontalAlignment="Stretch"
                 Style="{StaticResource AccentButtonStyle}"
+                
                 >
                 <StackPanel Orientation="Horizontal" Spacing="8">
-                    <TextBlock Text="Dividir" VerticalAlignment="Center"/>
-                    <FontIcon Glyph="&#xE751;" FontSize="16"/>
+                    <TextBlock Text="Dividir arquivo" VerticalAlignment="Center"/>
+                    
                 </StackPanel>
             </Button>
+        </Grid>
 
-        </StackPanel>
     </Grid>
 </Window>
