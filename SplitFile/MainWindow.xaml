@@ -37,9 +37,9 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="2" >
-                    <TextBlock x:Name="txtCaminhoArquivoas" FontSize="24" FontWeight="Bold" Text="Dividir arquivo de texto"/>
-                    <TextBlock x:Name="txtCaminhoArquivo" Text="C:\Selecione aqqui o endereço do seu arquivo de tex"/>
+            <StackPanel Grid.Column="2" VerticalAlignment="Center" >
+                    <TextBlock x:Name="txtCaminhoArquivoas" FontSize="20" FontWeight="Bold" Text="Dividir arquivo de texto"/>
+                <TextBlock TextWrapping="Wrap" Width="380" x:Name="txtCaminhoArquivo" Text="Selecione aqqui o endereço do seu arquivo de texto"/>
                 </StackPanel>
                 <!--<TextBox 
                     x:Name="txtCaminhoArquivo"
