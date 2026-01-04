@@ -1,15 +1,15 @@
 ﻿using FLexTools.Tools;
 using System;
 using System.Globalization;
+using TextCopy;
 
 namespace FLexTools
 {
     public class FLexTools
     {
-        [STAThread]
+        
         static void Main(string[] args)
         {
-
             string parameters = "";
 
             if (validateParameters(args))
