@@ -8,60 +8,81 @@
 ## 📃 Descrição do projeto
 
 <p align="justify">
- Projeto desenvolvido usando C# com o proposito de criar ferramentas para dev
+FLex Tools é uma coleção de utilitários desenvolvidos em C# para executar tarefas rápidas no Windows. O projeto reúne uma aplicação de console com ferramentas para gerar documentos de identificação fictícios, criar GUIDs e transformar o texto da área de transferência, além de um projeto WinUI 3 em desenvolvimento para dividir arquivos de texto.
 </p>
 
-
-
-<BR>
+<br>
 
 ## :hammer: Funcionalidades do projeto
 
-- `Funcionalidade 1`: Gerar CPF
-- `Funcionalidade 2`: Gerar GUID
-- `Funcionalidade 3`: Gerar CNPJ
+- `Funcionalidade 1`: Gerar um CPF fictício com dígitos verificadores calculados.
+- `Funcionalidade 2`: Gerar um CNPJ fictício com dígitos verificadores calculados.
+- `Funcionalidade 3`: Gerar um GUID usando `Guid.NewGuid()`.
+- `Funcionalidade 4`: Transformar o texto da área de transferência em formato *Title Case* (iniciais das palavras em maiúsculas, conforme a cultura `en-US`).
+- `Funcionalidade 5`: Projeto `SplitFile` com interface WinUI 3 para selecionar um arquivo e configurar a quantidade de partes e o sufixo. A interface ainda é um protótipo: a ação de execução não realiza a divisão do arquivo.
 
-<BR>
-  
+As opções da aplicação de console podem ser informadas por argumento ou selecionadas pelo menu exibido ao iniciar o programa. Os valores gerados e o texto transformado são exibidos no console e copiados para a área de transferência.
+
+<br>
+
 ## 📁 Acesso ao projeto
 
-Todo código fonte se encontra na pasta **source**
+O código-fonte está organizado nas seguintes pastas e arquivos principais:
 
-<BR>
-  
+- `FLexTools/`: aplicação de console e suas ferramentas.
+  - `Program.cs`: menu, seleção das operações e integração com a área de transferência.
+  - `Tools/CPF.cs`: geração de CPF.
+  - `Tools/CNPJ.cs`: geração de CNPJ.
+  - `Tools/GUID.cs`: geração de GUID.
+  - `Tools/Uppercase.cs`: transformação de texto em *Title Case*.
+  - `Tools/Snippet.cs`: utilitário para converter trechos de código em texto formatado para snippets do Visual Studio Code.
+- `SplitFile/`: aplicação gráfica WinUI 3, atualmente em estágio inicial.
+- `FLexTools.sln`: solução do Visual Studio que reúne os dois projetos.
+- `Material/` e `Script/`: recursos e arquivos auxiliares do repositório.
+
+<br>
+
 ## 🛠️ Abrir e rodar o projeto
 
-Use o ``Visual Studio 2022`` para usar este projeto
+1. Instale o **Visual Studio 2022** ou uma versão compatível com os SDKs utilizados pelos projetos.
+2. Abra o arquivo `FLexTools.sln`.
+3. Restaure os pacotes NuGet e selecione o projeto que deseja executar:
+   - `FLexTools`: aplicação de console direcionada ao **.NET 8 para Windows**.
+   - `SplitFile`: aplicação WinUI 3 direcionada ao **.NET 10 para Windows 10 (build 19041 ou superior)**.
+4. Execute o projeto selecionado pelo Visual Studio.
 
+Na aplicação `FLexTools`, é possível informar uma opção como argumento ao iniciar ou executar sem argumentos para abrir o menu interativo. As opções textuais disponíveis são `CPF` (`CP`), `CNPJ` (`CN`), `GUID` (`GU`) e `UPPERCASE` (`UPPER` ou `UP`). A operação `UPPERCASE` transforma o conteúdo textual que já estiver copiado para a área de transferência; portanto, é necessário que exista texto disponível no clipboard.
 
-<BR>  
-  
+<br>  
+
 ## ✔️ Técnicas e tecnologias utilizadas
 <p align="justify">
-<img width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
-&nbsp;&nbsp;<img width="80"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg">
-&nbsp;&nbsp;<img width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
-&nbsp;&nbsp;<img width="80"  src="https://raw.githubusercontent.com/felip3fl/felip3fl/1a6a66b6a143aab342cf2df18f56d8c1c7e6c8fb/Material/Icon/visual-studio.svg">
-&nbsp;&nbsp;<img width="80" src="https://raw.githubusercontent.com/felip3fl/felip3fl/1a6a66b6a143aab342cf2df18f56d8c1c7e6c8fb/Material/Icon/vscode.svg">
+<img width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
+&nbsp;&nbsp;<img width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET">
+&nbsp;&nbsp;<img width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+&nbsp;&nbsp;<img width="80" src="https://raw.githubusercontent.com/felip3fl/felip3fl/1a6a66b6a143aab342cf2df18f56d8c1c7e6c8fb/Material/Icon/visual-studio.svg" alt="Visual Studio">
+&nbsp;&nbsp;<img width="80" src="https://raw.githubusercontent.com/felip3fl/felip3fl/1a6a66b6a143aab342cf2df18f56d8c1c7e6c8fb/Material/Icon/vscode.svg" alt="Visual Studio Code">
 </p>
- 
-- ``Terminal``
-- ``.NET 8``
-- ``Paradigma de orientação a objetos``
 
-<BR>  
-  
+- `C#`
+- `.NET 8` (FLexTools)
+- `.NET 10` e `Windows App SDK 1.8` (SplitFile)
+- `WinUI 3`
+- `Windows Forms` (suporte à integração com a área de transferência)
+- `TextCopy 6.2.1`
+- `Microsoft.Windows.SDK.BuildTools 10.0.26100.7175`
+- `Paradigma de orientação a objetos`
+- `Visual Studio`
+
+<br>  
+
 ## Autor
 
 | [<img src="https://github.com/felip3fl/felip3fl/blob/main/Material/Nick/nick1.jpg?raw=true" width=115><br><sub>Felipe Lima</sub>](https://github.com/felip3fl) | 
 | :---: 
-  
-<BR>
-    
+
+<br>
+
 ## Licença
 
-Docusaurus is [MIT licensed](./LICENSE).
-
-The Docusaurus documentation (e.g., `.md` files in the `/docs` folder) is [Creative Commons licensed](./LICENSE-docs).
 <i><h6>Todos os direitos reservados. O autor permite apenas a visualização do código, sendo proibida qualquer utilização do mesmo, no todo ou em parte.</h6></i>
-
